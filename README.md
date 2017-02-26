@@ -1,12 +1,13 @@
 ![GPLv3](https://img.shields.io/badge/license-GPLv3-brightgreen.svg)
+[![MELPA](http://melpa.org/packages/vue-html-mode-badge.svg)](http://melpa.org/#/vue-html-mode)
 # vue-html-mode
 Vue template support for Emacs
 
 ![Screenshot](example.png)
 
 ## Installation & Usage
-vue-html-mode should be on MELPA soon, but for now, `(load-file "vue-html-mode.el")`
-in your `.emacs.d/init.el` should be used for installation.
+vue-html-mode is on MELPA. Type `M-x package-install <RET> vue-html-mode <RET>`
+to install it.
 
 Vue templates are best used with the excellent [vue-mode](https://github.com/CodeFalling/vue-mode),
 which the author of this package also contributes to. The hope is to make this
