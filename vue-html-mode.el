@@ -3,7 +3,7 @@
 ;; Copyright 2016, 2017 Adam Niederer
 
 ;; Author: Adam Niederer <adam.niederer@gmail.com>
-;; URL: http://github.com/AdamNiederer/vue-mode
+;; URL: http://github.com/AdamNiederer/vue-html-mode
 ;; Version: 0.1
 ;; Keywords: languages vue template
 ;; Package-Requires: ()
