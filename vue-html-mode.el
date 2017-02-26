@@ -34,6 +34,13 @@
 
 ;;; Code:
 
+(defgroup vue-html nil
+  "Major mode for vue template files"
+  :prefix "vue-html-"
+  :group 'languages
+  :link '(url-link :tag "Github" "https://github.com/AdamNiederer/vue-html-mode")
+  :link '(emacs-commentary-link :tag "Commentary" "vue-html-mode"))
+
 (defconst vue-html-complex-interp-regex
   "\\({{\\)\\(.*?\\)\\(|\\) *\\(.*?\\)(.*) *\\(}}\\)")
 
@@ -54,13 +61,13 @@
 
 (defcustom vue-html-tab-width 2
   "Tab width for vue-html-mode"
-  :group 'vue
+  :group 'vue-html
   :type 'integer)
 
 (defcustom vue-html-color-interpolations nil
   "Whether to color the body of variable interpolations with the same color as
 delimiters. Does not affect the colors of filters and their arguments."
-  :group 'vue
+  :group 'vue-html
   :type 'boolean)
 
 (defconst vue-html-color-interpolations-font-lock-keywords
