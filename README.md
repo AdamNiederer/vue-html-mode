@@ -9,10 +9,9 @@ Vue template support for Emacs
 vue-html-mode is on MELPA. Type `M-x package-install <RET> vue-html-mode <RET>`
 to install it.
 
-Vue templates are best used with the excellent [vue-mode](https://github.com/CodeFalling/vue-mode),
-which the author of this package also contributes to. The hope is to make this
-the default mode for Vue templates eventually, but fiddling with the code of
-vue-mode to set this mode as the default should be fairly easy for now.
+Vue component files are best edited with the excellent [vue-mode](https://github.com/CodeFalling/vue-mode),
+which the author of this package also contributes to. This mode is included in 
+vue-mode, and is the default mode for editing template blocks.
 
 ## Functions
 - `vue-html-mode` - Enable Vue HTML Template mode
@@ -20,7 +19,7 @@ vue-mode to set this mode as the default should be fairly easy for now.
 ## Contributing
 If you want to see a function or a feature in this mode, feel free to open an
 issue or a pull request. I hope to eventually add support for chained filters
-in mustache bindings, and a few more functions.
+in mustache interpolation, and a few more functions.
 
 ## License
 GPLv3+
