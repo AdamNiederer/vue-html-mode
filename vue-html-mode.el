@@ -56,8 +56,8 @@
 (defconst vue-html-directive-regex
   "\\b\\(v-[A-Za-z0-9-.]+\\)\\(:[A-z.]\\)?=")
 
-(defconst vue-html-keyword-directives
-  '("v-for" "v-if" "v-else-if" "v-else" "v-once"))
+(defconst vue-html-keyword-regex
+  "\\(v-\\(?:for\\|if\\|else-if\\|else\\|once\\)\\)[^-.A-Za-z0-9]")
 
 (defcustom vue-html-tab-width 2
   "Tab width for vue-html-mode"
@@ -91,7 +91,7 @@ delimiters. Does not affect the colors of filters and their arguments."
     (,vue-html-directive-regex . (1 font-lock-builtin-face t))
     (,vue-html-shorthand-regex . (1 font-lock-builtin-face t))
     (,vue-html-shorthand-regex . (2 font-lock-variable-name-face t))
-    (,(regexp-opt vue-html-keyword-directives) . (0 font-lock-keyword-face t)))
+    (,vue-html-keyword-regex . (1 font-lock-keyword-face t)))
   "List of Font Lock keywords which are applied regardless of settings")
 
 (defvar vue-html-mode-map
