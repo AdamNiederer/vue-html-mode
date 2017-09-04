@@ -54,7 +54,7 @@
   "\\s +\\([@:]\\)\\([A-z0-9.]+\\)=.*?")
 
 (defconst vue-html-directive-regex
-  "\\b\\(v-[A-Za-z0-9-.]+\\)\\(:[A-z.]\\)?=")
+  "\\b\\(v-[A-Za-z0-9-.]+\\)\\(:[A-z.]\\)?")
 
 (defconst vue-html-keyword-regex
   "\\(v-\\(?:for\\|if\\|else-if\\|else\\|once\\)\\)[^-.A-Za-z0-9]")
