@@ -42,13 +42,13 @@
   :link '(emacs-commentary-link :tag "Commentary" "vue-html-mode"))
 
 (defconst vue-html-complex-interp-regex
-  "\\({{\\)\\(.*?\\)\\(|\\) *\\(.*?\\)(.*) *\\(}}\\)")
+  "\\({{\\)\\([^{].*?\\)?\\(|\\) *\\(.*?\\)(.*) *\\(}}\\)")
 
 (defconst vue-html-filter-interp-regex
-  "\\({{\\)\\(.*?\\)\\(|\\) *\\([^\(\)]*?\\) *\\(}}\\)")
+  "\\({{\\)\\([^{].*?\\)?\\(|\\) *\\([^\(\)]*?\\) *\\(}}\\)")
 
 (defconst vue-html-simple-interp-regex
-  "\\({{\\).*?\\(}}\\)")
+  "\\({{\\)\\(?:[^{].*?\\)?\\(}}\\)")
 
 (defconst vue-html-shorthand-regex
   "\\s +\\([@:]\\)\\([A-z0-9-.]+\\)=.*?")
