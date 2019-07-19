@@ -112,7 +112,7 @@ Does not affect the colors of filters and their arguments."
   (string-match-p "^\s*$" (buffer-substring (point-at-bol) (point-at-eol))))
 
 (defun vue-html-indent ()
-  "Indent the line according to `vue-html-tab-width' and `vue-html-extra-indent'."
+  "Indent the line according to `vue-html-tab-width'(`sgml-basic-offset') and `vue-html-extra-indent'."
   (cond
    ((= 1 (line-number-at-pos)) (indent-line-to vue-html-extra-indent))
    ((and (vue-html-last-line-p) (vue-html-line-empty-p)) (indent-line-to 0))
@@ -122,6 +122,7 @@ Does not affect the colors of filters and their arguments."
 (define-derived-mode vue-html-mode html-mode "vue-html"
   "Major mode for Vue.js templates."
   (setq tab-width vue-html-tab-width)
+  (setq-local sgml-basic-offset vue-html-tab-width)
   (setq indent-line-function #'vue-html-indent)
   (font-lock-add-keywords nil vue-html-font-lock-keywords)
   (when vue-html-color-interpolations
